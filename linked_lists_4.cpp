@@ -33,7 +33,7 @@ class Node
     }
 };
 
-void print(Node* &head)
+void print(Node* head)   //---> no need to put &head here (by referal), works simply by Node* head also.
 {
     Node* temp = head;
     while(temp!=NULL)
@@ -138,10 +138,6 @@ void delNode(Node* &head,Node* &tail,int position)
     }
 }
 
-
-
-
-
 int main()
 {
     Node* node1 = new Node(24);
@@ -154,8 +150,13 @@ int main()
     delNode(head,tail,4);
     print(head);
     cout<<tail->data<<endl;
+    
 
 }
+
+
+
+
 
 
 
