@@ -20,6 +20,17 @@ class Node
 
 Node* reverse(Node* &head)
 {
+    
+if(head->next == NULL)
+    {
+        return head;
+    }
+
+    if(head == nullptr)
+    {
+        return head;     
+    }
+    
     Node* prev = NULL;
     Node *curr = head;
     Node* forward = NULL;
