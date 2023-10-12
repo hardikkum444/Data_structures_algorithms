@@ -18,7 +18,7 @@ class Node
     }
 };
 
-Node* root;
+Node* root; //creating universal root
 
 class BST
 {
