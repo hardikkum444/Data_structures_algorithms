@@ -69,6 +69,17 @@ bool isEmpty()
     }
 }
 
+void display()
+{
+    if(top>=0)
+    {
+        for(int i =top;i>=0;i--)
+            {
+                cout<<arr[i]<<" ";  //this part is important because, i taught me that the top element always goes to the end, thats why we have to start from the end when we wat to travers!
+            }
+    }
+    cout<<endl;
+}
 };
 
 
