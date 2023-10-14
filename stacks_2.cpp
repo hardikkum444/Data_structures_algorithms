@@ -20,7 +20,8 @@ class st
 
     void push(int x)
 {
-    if(size-top>1)
+    if(size-top>1)  
+//because, size = 5 , in arr terms is 4; therefore if size is 5 and top is 4, they are basically at the same position 
     {
         top++;
         arr[top] = x;
