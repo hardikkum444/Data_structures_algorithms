@@ -26,7 +26,7 @@ class queue
     
     void push(int d)
     {
-        if(rear == size)
+        if(rear == size-1)
         {
             cout<<"queue is empty"<<endl;
         }
