@@ -16,11 +16,11 @@ void heapify(int arr[],int n , int i)
     int left = i*2;
     int right = (i*2)+1;
 
-    if(left<n && arr[left]>arr[largest])
+    if(left<=n && arr[left]>arr[largest])//when indexing is from, 1, make sure to do <= n
     {
         largest = left;
     }
-    else if(right<n && arr[right]>arr[largest])
+    else if(right<=n && arr[right]>arr[largest])
     {
         largest = right;
     }
