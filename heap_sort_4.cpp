@@ -41,6 +41,8 @@ int main()
         heapify(arr,n,i);
     }
 
+    //this building of heap gets done in O(n) complexity
+
     cout<<"now printing"<<endl;
     for(int i=1;i<n;i++)
     {
