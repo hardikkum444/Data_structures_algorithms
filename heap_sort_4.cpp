@@ -13,14 +13,14 @@ using namespace std;
 void heapify(int arr[],int n , int i)
 {
     int largest = i;
-    int left = i*2;
+    int left = (i*2) ;
     int right = (i*2)+1;
 
     if(left<=n && arr[left]>arr[largest])//when indexing is from, 1, make sure to do <= n
     {
         largest = left;
     }
-    else if(right<=n && arr[right]>arr[largest])
+    if(right<=n && arr[right]>arr[largest])
     {
         largest = right;
     }
@@ -34,9 +34,9 @@ void heapify(int arr[],int n , int i)
 
 int main()
 {
-    int arr[6] = {-1,54,53,55,52,50};
-    int n =6;
-    for(int i=n/2;i>0;i--)
+    int arr[7] = {-1,50,52,49,55,54,53};
+    int n = 7;
+    for(int i=(n/2);i>0;i--)
     {
         heapify(arr,n,i);
     }
