@@ -12,14 +12,14 @@ using namespace std;
 void heapify(int arr[],int n, int i)
 {
     int largest = i;
-    int left = (2*i);
-    int right = (2*i)+1;
+    int left = (i*2)+1;
+    int right = (i*2)+2;
     
-    if(left<=n && arr[left]>arr[largest])
+    if(left<n && arr[left]>arr[largest])
     {
         largest = left;
     }
-    if(right<=n && arr[right]>arr[largest])
+    if(right<n && arr[right]>arr[largest])
     {
         largest = right;
     }
@@ -31,44 +31,50 @@ void heapify(int arr[],int n, int i)
     }
 }
 
-void heapSort(int arr[],int s)
+void heapSort(int arr[],int n)
 {
-    for(int i =s;i<1;i--)
+    for(int i=n-1;i>0;i--)
     {
-        swap(arr[i],arr[1]);
-        heapify(arr,s-1,i);
+        swap(arr[0],arr[i]);
+        heapify(arr,i,0);
     }
 }
 
 int main()
 {
-    int arr[7] = {-1,50,52,49,55,54,53};
-    int n = 7;
-    for(int i=(n/2);i>0;i--)
+    int arr[6] = {10,30,50,20,35,15};
+    int n = 6;
+    
+    for(int i =(n/2)-1;i>=0;i--)
     {
         heapify(arr,n,i);
     }
-
-    //this building of heap gets done in O(n) complexity
-
-    cout<<"now printing"<<endl;
-    for(int i=1;i<n;i++)
+    
+    for(int i=0;i<n;i++)
     {
         cout<<arr[i]<<" ";
     }
     cout<<endl;
     
     heapSort(arr,n);
-    
-    cout<<"now printing"<<endl;
-    for(int i=1;i<n;i++)
+    for(int i=0;i<n;i++)
     {
         cout<<arr[i]<<" ";
     }
     cout<<endl;
     
-    
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
