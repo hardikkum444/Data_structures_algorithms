@@ -110,7 +110,7 @@ class queue
         }
         else
         {
-            ans = arr[rear-1];
+            ans = arr[rear-1];  
         }
         return ans;
     }
