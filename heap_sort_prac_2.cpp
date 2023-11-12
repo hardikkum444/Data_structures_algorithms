@@ -28,6 +28,7 @@ class heap
             if(arr[parent] <arr[index])
             {
                 swap(arr[parent],arr[index]);
+                index = parent;
             }
             else
             {
