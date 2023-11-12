@@ -1,7 +1,6 @@
-//basic insertion sort rev 
+//basic linear search
 
-//lets quickly revise insertion sort
-
+//lets quickly revise linear search
 #include <iostream>
 using namespace std;
 
