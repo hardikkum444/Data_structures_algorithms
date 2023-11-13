@@ -190,9 +190,9 @@ int main()
     cout<<endl;
     
     int d;
-    cin>>d;
     cout<<"which element would you like to delete? "<<endl;
-    b.del(root,d);
+    cin>>d;
+    root = b.del(root,d);
     
     b.inorder(root);
 }
