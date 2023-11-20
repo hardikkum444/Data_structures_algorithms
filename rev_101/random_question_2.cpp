@@ -1,0 +1,75 @@
+//random wuestion which popped up regarding, findding if there is an element bigger 
+//than enetered element in a given maxheap
+
+#include <iostream>
+using namespace std;
+
+void heapify(int arr[],int n,int i)
+{
+    int largest = i;
+    int left = 2*i +1;
+    int right = 2*i +2;
+    
+    if(left<n && arr[left]>arr[largest])
+    {
+        largest = left;
+    }
+    if(right<n && arr[right]>arr[largest])
+    {
+        largest = right;
+    }
+    if(largest!= i)
+    {
+        swap(arr[largest],arr[i]);
+        heapify(arr,n,largest);
+    }
+}
+
+void heapsort(int arr[],int n)
+{
+    for(int i =n-1;i>0;i--)
+    {
+        swap(arr[0],arr[i]);
+        heapify(arr,n,i);
+    }
+}
+
+void ifexist(int arr[],int n,int i)
+{
+    if(arr[0]>i)
+    {
+        cout<<"there is a number greater than "<<i<<" in your maxheap"<<endl;
+    }
+    else
+    {
+        cout<<"there aint a number greater than "<<i<<" in your maxheap"<<endl;
+    }
+}
+
+int main()
+{
+    int n =5;
+    int arr[5] = {23,22,13,45,55};
+
+    for(int i=n/2 -1;i>=0;i--)
+    {
+        heapify(arr,n,i);
+    }
+
+    //heapsort(arr,n);
+
+    // for(int i=0;i<n;i++)
+    // {
+    //     cout<<arr[i]<<" ";
+    // }
+    // cout<<endl;
+
+
+    // cout<<arr[0]<<endl;
+    int i;
+    cout<<"enter the value that you want to search"<<endl;
+    cin>>i;
+    ifexist(arr,n,i);
+
+
+}

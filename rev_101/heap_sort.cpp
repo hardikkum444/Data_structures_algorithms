@@ -7,11 +7,11 @@ void heapify(int arr[],int n , int i)
     int left = 2*1 +1;
     int right = 2*1 +2;
 
-    if(arr[left] > largest)
+    if(left < n && arr[left] > arr[largest])
     {
         largest = left;
     }
-    if(arr[right] > largest)
+    if(right < n && arr[right] > arr[largest])
     {
         largest = right;
     }
