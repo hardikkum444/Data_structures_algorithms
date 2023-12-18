@@ -1,4 +1,4 @@
-//this is the code for array insertion that i created using shifting of elements and reversal method
+//this is the code for array insertion that i created using shifting of elements and reversal
 
 #include <iostream>
 using namespace std;
